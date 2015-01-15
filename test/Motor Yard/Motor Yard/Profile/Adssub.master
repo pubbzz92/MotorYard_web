@@ -1,0 +1,103 @@
+﻿
+<%@ Master Language="C#" MasterPageFile="~/Profile/Profile_Sub.master" AutoEventWireup="true" CodeBehind="Adssub.master.cs" Inherits="Motor_Yard.Profile.Advertisment" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="headProfile" runat="server">
+    <style type="text/css">
+        .auto-style5 {
+            height: 11px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="BodyProfile" runat="server">
+    <table cellpadding="0" cellspacing="0" class="auto-style1">
+        <tr>
+            <td rowspan="2" style="background-color: #f8f8f8; width: 290px; border-right: 1px solid #d6d5fa;">
+                <asp:LinkButton ID="LinkButtonListItem" runat="server" style="text-decoration:none;" OnClick="LinkButtonListItem_Click"  >
+                
+                <table cellpadding="0" cellspacing="0" class="auto-style5 notificationList" style="display: block; margin: 10px 10px 10px 10px; width: 270px; height: 54px;">
+                    <tr>
+                        <td style="font-size: 13px; padding: 5px 5px 5px 5px; color: #2231d4"><b>xxxxBrakePart Ads... </b></td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 10px; padding: 5px 5px 5px 5px; color: #000; font-weight: bold;">2014-09-25 06:55:AM</td>
+                    </tr>
+                </table>
+                    </asp:LinkButton>
+             
+                  <asp:LinkButton ID="LinkButton3" runat="server" style="text-decoration:none;">
+                
+                <table cellpadding="0" cellspacing="0" class="auto-style5 notificationList" style="display: block; margin: 10px 10px 10px 10px; width: 270px; height: 54px;">
+                    <tr>
+                        <td style="font-size: 13px; padding: 5px 5px 5px 5px; color: #2231d4"><b>xxxxBrakePart Ads... </b></td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 10px; padding: 5px 5px 5px 5px; color: #000; font-weight: bold;">2014-09-25 06:55:AM</td>
+                    </tr>
+                </table>
+                    </asp:LinkButton>
+              
+                  <asp:LinkButton ID="LinkButton4" runat="server" style="text-decoration:none;">
+                
+                <table cellpadding="0" cellspacing="0" class="auto-style5 notificationList" style="display: block; margin: 10px 10px 10px 10px; width: 270px; height: 54px;">
+                    <tr>
+                        <td style="font-size: 13px; padding: 5px 5px 5px 5px; color: #2231d4"><b>xxxxBrakePart Ads... </b></td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 10px; padding: 5px 5px 5px 5px; color: #000; font-weight: bold;">2014-09-25 06:55:AM</td>
+                    </tr>
+                </table>
+                    </asp:LinkButton>
+              
+                  <asp:LinkButton ID="LinkButton5" runat="server" style="text-decoration:none;">
+                
+                <table cellpadding="0" cellspacing="0" class="auto-style5 notificationList" style="display: block; margin: 10px 10px 10px 10px; width: 270px; height: 54px;">
+                    <tr>
+                        <td style="font-size: 13px; padding: 5px 5px 5px 5px; color: #2231d4"><b>xxxxBrakePart Ads... </b></td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 10px; padding: 5px 5px 5px 5px; color: #000; font-weight: bold;">2014-09-25 06:55:AM</td>
+                    </tr>
+                </table>
+                    </asp:LinkButton>
+              
+                  <asp:LinkButton ID="LinkButton6" runat="server" style="text-decoration:none;">
+                
+                <table cellpadding="0" cellspacing="0" class="auto-style5 notificationList" style="display: block; margin: 10px 10px 10px 10px; width: 270px; height: 54px;">
+                    <tr>
+                        <td style="font-size: 13px; padding: 5px 5px 5px 5px; color: #2231d4"><b>xxxxBrakePart Ads... </b></td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 10px; padding: 5px 5px 5px 5px; color: #000; font-weight: bold;">2014-09-25 06:55:AM</td>
+                    </tr>
+                </table>
+                    </asp:LinkButton>
+              
+            </td>
+            <td style="vertical-align: top; border-bottom: 1px solid #d6d5fa;" class="auto-style5">
+                  <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+
+                <asp:LinkButton ID="create" runat="server" Visible="false"  CssClass="loginbtn" Style="height: 10px; width: 78px; margin: 6px 0px 6px 6px;" PostBackUrl="~/Profile/createAds.aspx" OnClick="create_Click">Create New</asp:LinkButton>
+                <asp:LinkButton ID="edit" runat="server"  Visible="false"  CssClass="loginbtn" Style="height: 10px; width: 78px; margin: 6px 0px 6px  6px;" >Edit</asp:LinkButton>
+                <asp:LinkButton ID="save" runat="server"   Visible="false" CssClass="loginbtn" Style="height: 10px; width: 78px; margin: 6px 0px 6px  6px;" OnClick="save_Click">Save</asp:LinkButton>
+                <asp:LinkButton ID="Delete" runat="server"  Visible="false"  CssClass="loginbtn" Style="height: 10px; width: 78px; margin: 6px 0px 6px  6px;" OnClick="Delete_Click">Delete</asp:LinkButton>
+                <asp:LinkButton ID="Cancel" runat="server"  Visible="false"  CssClass="loginbtn" Style="height: 10px; width: 78px; margin: 6px 0px 6px  6px;" OnClick="Cancel_Click">Cancel</asp:LinkButton>
+              
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </td>
+        </tr>
+        <tr>
+
+            <td style="vertical-align: top;">
+                <asp:ContentPlaceHolder ID="BodyProfile" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

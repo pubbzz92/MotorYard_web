@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="Profile_Sub.master.cs" Inherits="Motor_Yard.Profile.Profile_Sub" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="headProfile" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 250px;
+        }
+
+        .auto-style3 {
+            width: 700px;
+        }
+
+        .auto-style4 {
+            width: 212px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
+    <table cellpadding="0" cellspacing="0" class="auto-style1" style="width: 1000px;">
+        <tr>
+            <td style="width: 1000px; vertical-align: top">
+
+
+
+
+
+                <table cellpadding="0" cellspacing="0" class="auto-style2" style="width: 1000px; vertical-align: top; border-bottom: 1px solid #c2a3ef; padding-bottom: 10px;">
+                    <tr>
+                        <td>
+                            <table cellpadding="0" cellspacing="0" class="auto-style3" style="width: 700px;">
+                                <tr>
+                                    <td rowspan="2" style="width: 60px;" class="auto-style4">
+                                        <img src="../images/pr.jpg" style="width: 50px; height: 50px" alt="Myprofile" /></td>
+                                    <td rowspan="2" style="padding: 2px 0 0 0; vertical-align: top; font-size: 18px;">ABC Company PVT [Ltd]
+                                             <br />
+                                        <span style="display: block; font-size: 12px; color: #0b74ce;">dulamadushani91@gmail.com
+                                             <br />
+                                            Nugegoda</span></td>
+                                </tr>
+
+                            </table>
+
+                        </td>
+                        <td style="float: right;">
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profile/notification.aspx" Style="margin: 0 10px 0 0;" CssClass="clientProfile">Notification</asp:HyperLink>|<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profile/createAds.aspx" Style="margin: 0 10px 0 10px;" CssClass="clientProfile">Advertisement</asp:HyperLink>|<asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Profile/profile.aspx" Style="margin: 0 0 0 10px;" CssClass="clientProfile">Profile</asp:HyperLink></td>
+                    </tr>
+
+
+
+
+
+
+
+                </table>
+
+
+
+
+            </td>
+
+        </tr>
+
+        <tr>
+            <td style="width: 1000px; margin: 0 0 5px 0">
+                <asp:ContentPlaceHolder ID="BodyProfile" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+
+    </table>
+
+
+
+
+
+
+</asp:Content>

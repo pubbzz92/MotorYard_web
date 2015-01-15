@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.Master.cs" Inherits="Motor_Yard.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'/>
+      <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            background-color:#C1C1D6;
+        }
+
+        .paratag:hover {
+            color: #2749ea;
+            text-decoration: underline;
+        }
+
+        .paratag {
+            display: block;
+            float: none;
+            margin-left: 6px;
+            margin-top: 5px;
+            text-decoration: none;
+            color: #b0a9a9;
+        }
+
+
+        .auto-style1 {
+            width: 1157px;
+        }
+    </style>
+    <link href="style/menustyle.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div style="width:700px; padding-left:90px">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div>
+            <table cellpadding="0" cellspacing="0" border="0" class="auto-style1" style="display: block; margin: 0 0px 0 auto;">
+                <tr>
+                    <td>
+
+
+
+
+
+
+
+                        <style type="text/css">
+                            .manuMain {
+                                display:block;
+                                float:left;
+                            }
+                               .manuMain li {
+                                display:block;
+                                float:right;
+                                padding:5px;
+                            }
+                                .manuMain li a {
+                                    color:#222;
+                                    text-decoration:none;
+                                    padding:0 10px;
+                                    text-align:right;
+                                    font-size:16px;
+                                }
+                                .manuMain li a:hover {
+                                    color: red;
+
+                                }
+                            .auto-style2 {
+                                height:65px;
+                                width: 223px;
+                               
+                                
+                            }
+                             
+                            .auto-style3
+                            {
+                                width: 994px
+                            }
+
+                           
+                        </style>
+
+                        
+
+
+                        <table style="float:left;background-image:url('Images/bann.jpg') " class="auto-style1" >
+                            <tr>
+                               <td class="auto-style2">
+                                    
+                                 
+                                     &nbsp;</td>
+                                <td style="display: block; padding-top: 15px; text-align: right;  vertical-align: top; font-size: 12px; padding-left:70px;" class="auto-style3">
+                                    
+                                    <asp:LinkButton ID="LinkButton1" Style="color: #000; border-radius:12px;border: 3px solid #d5cdcd; padding:3px; padding-left:5px;padding-right:5px; margin-right:5px;" BorderStyle="Solid" PostBackUrl="~/login.aspx?login=true" runat="server" Font-Size="Large" BackColor="#C5D8FF" Font-Bold="False"   ForeColor="Black">Login</asp:LinkButton>
+                                    | 
+                                    <asp:LinkButton ID="LinkButton2" Style=" color: #000; border-radius:12px;border: 3px solid #d5cdcd; padding:3px; padding-left:5px;padding-right:5px; margin-right:5px;"  runat="server" BorderStyle="Solid" PostBackUrl="~/login.aspx?signUp=true"  Font-Size="Large" BackColor="#C5D8FF" Font-Bold="False"   ForeColor="Black">Sign Up</asp:LinkButton>
+                               
+                                <ul  class="nav nav-pills" style="width: 894px; float:left; text-align:right; margin-top:15px; margin-bottom:0; margin-left:185px;">
+                                            <li><a href="/Home.aspx"><b>Home</b></a></li>
+                                            <li><a href="#"><b>Category</b></a></li>
+                                            <li><a href="#"><b>Services & Benefits</b></a></li>
+                                            <li><a href="#"><b>Contact</b></a></li>
+                                            <li><a href="#"><b> About </b></a></li>
+                                            
+                                           
+                                            
+                                                
+                                        </ul>
+                                </td>
+                            </tr>
+                             
+                            <%--<tr>
+                                <td colspan="3" style="height: 50px;">
+                                    <nav>
+                                        <ul class="nav" style="width: 1014px">
+
+                                            <li><a href="/Default.aspx">Home</a></li>
+                                            <li><a href="/Default1.aspx">Category</a>
+                                              <ul>
+                                                    <li><a href="#">Service Parts</a></li>
+                                                    <li><a href="#">Brake Parts</a></li>
+                                                    <li><a href="#">Engine Parts</a></li>
+                                                    <li><a href="#">Suspension & Steering</a></li>
+                                                    <li><a href="#">Transmission</a></li>
+                                                    <li><a href="#">Cooling & Heating</a></li>
+                                                    <li><a href="#">Electrical</a></li>
+                                                    <li><a href="#">Body & Exhaust</a></li>
+                                                    <li><a href="#">Lubricants & Fluids</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">about</a></li>
+
+
+                                                <li><a href="#">services & benefits</a>
+
+                                                </li>
+                                                <li><a href="#">Contact</a></li>
+                                                <li><a style="display: block; width: 363px; top: 0px; left: 0px;">&nbsp;</a></li>
+                                        </ul>
+                                    </nav>
+                                </td>
+                            </tr>--%>
+                        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; background-color:#FF6600; border-radius: 10px 10px 0 0;">
+
+                        <p>
+                            <asp:HyperLink ID="HyperLink1" runat="server"> Home</asp:HyperLink>
+                            &nbsp;|
+                    <asp:HyperLink ID="HyperLink2" runat="server"> Category</asp:HyperLink>
+                            | About | Services & Benefits | Contact
+                            <br />
+                            ©  2015 Motor Yard. All rights reserved, ℗ Mortor Yard
+
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="sub.master.cs" Inherits="Motor_Yard.sub" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <asp:ContentPlaceHolder ID="subhead" runat="server">
+    </asp:ContentPlaceHolder>
+
+    
+
+    <style type="text/css">
+        .auto-style2 {
+            width: 221px;
+        }
+        .auto-style3 {
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+
+    
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <table style="width:1000px">
+        <tr>
+            <td style="vertical-align: top;" class="auto-style3"><table cellpadding="0" cellspacing="0" style="display:block;width: 199px; height:180px; background-color:rgba(242, 242, 242, 0.95); margin:0 0 0 0; border: 1px solid #dbd7d7; border-radius: 4px;" class="auto-style2">
+                    <tr>
+                            <td class="auto-style10" style="color:#; padding:5px 5px 5px 10px;" >SELECT AREA </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:2px;" class="auto-style9" >
+                            <asp:CheckBoxList ID="CheckBoxList1" runat="server" Style=" color:#;">
+                                <asp:ListItem>Colombo</asp:ListItem>
+                                <asp:ListItem>Galle</asp:ListItem>
+                                <asp:ListItem>Matara</asp:ListItem>
+                                <asp:ListItem>Anuradapura</asp:ListItem>
+                            </asp:CheckBoxList>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="#" Style=" display: block; margin-left: 8px;margin-top: 5px;">See more...</asp:HyperLink></td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:0 0;" ><asp:LinkButton ID="LinkButton1" runat="server" CssClass="gButton" Style="display:block;   height: 10px; width: 132px;float:right;display: block;margin: 1px 83px 4px 8px; " OnClick="LinkButton1_Click"  >Go</asp:LinkButton>
+                            </td>
+                    </tr>
+
+
+
+                </table></td>
+            <td rowspan="2" style="width:800px"><asp:ContentPlaceHolder ID="sub_place" runat="server">
+                    </asp:ContentPlaceHolder></td>
+            </tr>
+        <tr>
+            <td style="  width:200px; display: block; margin: 19px 0px 0px 0px;"> <table class="auto-style2" style=" display:block;width:200px;height:200px; background-color:rgba(104, 104, 104, 0.30);margin:0 0 0 0; border: 1px solid #dbd7d7; border-radius:4px;display:block; vertical-align:top;" >
+                    <tr >
+                        <td class="auto-style8" style="color:#; padding:5px 5px 5px 8px;" ><b>SELECT YOUR VEHICLE</b></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style8"><asp:DropDownList ID="DropDownList1" runat="server" style="width:180px; padding:2px 0 2px 2px;color:#000; background-color:#f6f1f1;margin:0 0 0 6px;border-radius: 3px;"> 
+                            <asp:ListItem>Select Make</asp:ListItem>
+                            <asp:ListItem>AC Cars</asp:ListItem>
+                            <asp:ListItem>Aixam</asp:ListItem>
+                            <asp:ListItem>Alfa Romeo</asp:ListItem>
+                            <asp:ListItem>Allied Electric</asp:ListItem>
+                            <asp:ListItem>Alpina</asp:ListItem>
+                            <asp:ListItem>Ariel</asp:ListItem>
+                            <asp:ListItem>Asia</asp:ListItem>
+                            <asp:ListItem>Aston Martin</asp:ListItem>
+                            <asp:ListItem>BMW</asp:ListItem>
+                            </asp:DropDownList></td></tr>
+            
+                    <tr>
+                        <td class="auto-style8"><asp:DropDownList ID="DropDownList2" runat="server" style="width:180px; padding:2px 0 2px 2px;color:#000;margin:0 0 0 6px;background-color:#f6f1f1;border-radius: 3px;">
+                            <asp:ListItem>Select Model</asp:ListItem>
+                            <asp:ListItem>AC 212</asp:ListItem>
+                            <asp:ListItem>Ace</asp:ListItem>
+                            <asp:ListItem>Aceca</asp:ListItem>
+                            <asp:ListItem>cobra</asp:ListItem>
+                            <asp:ListItem>mamba</asp:ListItem>
+                             </asp:DropDownList></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style8"><asp:DropDownList ID="DropDownList3" runat="server" style="width:180px; padding:2px 0 2px 2px;margin:0 0 0 6px;background-color:#f6f1f1; border-radius:3px;">
+                            <asp:ListItem>Select year</asp:ListItem>
+                            <asp:ListItem>AC 212</asp:ListItem>
+                            <asp:ListItem>Ace</asp:ListItem>
+                            <asp:ListItem>Aceca</asp:ListItem>
+                            <asp:ListItem>cobra</asp:ListItem>
+                            <asp:ListItem>mamba</asp:ListItem>
+                             </asp:DropDownList></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style8"><asp:DropDownList ID="DropDownList4" runat="server" style="width:180px; padding:2px 0 2px 2px;margin:0 0 0 6px;border-radius: 3px;background-color: #f6f1f1;">
+                            <asp:ListItem>Select Engine</asp:ListItem>
+                            <asp:ListItem>AC 212</asp:ListItem>
+                            <asp:ListItem>Ace</asp:ListItem>
+                            <asp:ListItem>Aceca</asp:ListItem>
+                            <asp:ListItem>cobra</asp:ListItem>
+                            <asp:ListItem>mamba</asp:ListItem>
+                             </asp:DropDownList></td>
+                    </tr>
+                            
+                    <tr>
+                        <td><asp:DropDownList ID="DropDownList5" runat="server" style="width:180px; padding:2px 0 2px 2px;margin:0 0 0 6px;border-radius: 3px;background-color:#f6f1f1;">
+                            <asp:ListItem>Select fuel</asp:ListItem>
+                            <asp:ListItem>AC 212</asp:ListItem>
+                            <asp:ListItem>Ace</asp:ListItem>
+                            <asp:ListItem>Aceca</asp:ListItem>
+                            <asp:ListItem>cobra</asp:ListItem>
+                            <asp:ListItem>mamba</asp:ListItem>
+                             </asp:DropDownList></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:LinkButton ID="LinkButton3" runat="server" CssClass="goButton" Style="display:block;   height: 10px; width: 130px;float:right;display: block;margin: 1px 83px 4px 6px;">Go</asp:LinkButton>
+                        </td>
+                    </tr>
+                </table></td>
+       </tr>
+    </table>
+    
+
+        
+
+
+
+                
+</asp:Content>
