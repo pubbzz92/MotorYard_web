@@ -35,33 +35,16 @@ namespace Motor_Yard
         //}
 
 
-
-
-
-
-
-        protected void DropDownListSelectBrand_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void DropDownList3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 generateComboItems_Brand();
+                Session["area_info"] = "";
             }
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         public void generateComboItems_Brand()
         {
@@ -114,7 +97,7 @@ namespace Motor_Yard
                 if (drop_fuel.Items.Count != 1)
                 {
                     drop_fuel.Items.Clear();
-                    drop_fuel.Text = "Select Fuel";
+                    drop_fuel.Text = "Select Fuel Type";
                 }
                 DatabaseConnections db = new DatabaseConnections();
                 string ItemId = db.GetId(check, "Model");
@@ -135,13 +118,13 @@ namespace Motor_Yard
         {
             string check = drop_year.Text;
             string check2 = drop_model.Text;
-
-           /* if (check != "")
+/*
+           if (check != "")
             {
-                if (comboBox6_category.Items.Count != 0)
+                if (drop_category.Items.Count != 1)
                 {
-                    comboBox6_category.Items.Clear();
-                    comboBox6_category.Text = "";
+                    drop_category.Items.Clear();
+                    drop_category.Text = "";
                 }
                 DatabaseConnections db = new DatabaseConnections();
                 string ItemId = db.GetId(check, "Year");
@@ -152,13 +135,14 @@ namespace Motor_Yard
 
                 while (reader[i] != null)
                 {
-                    comboBox6_category.Items.Add(reader[i]);
+                    drop_category.Items.Add(reader[i]);
                     i++;
 
                 }
             
 
             }*/
+ 
 
 
 
@@ -219,16 +203,17 @@ namespace Motor_Yard
 
 
         }
+       
 
         protected void button_go_Click(object sender, EventArgs e)
         {
             String brand,model,year,engine,fuel;
-            brand=drop_brand.Text;
-            model=drop_model.Text;
-            fuel=drop_fuel.Text;
-            engine=drop_engine.Text;
-            year=drop_year.Text;
-            
+            brand=drop_brand.SelectedValue;
+            model = drop_model.SelectedValue;
+            fuel = drop_fuel.SelectedValue;
+            engine = drop_engine.SelectedValue;
+            year = drop_year.SelectedValue;
+            if(brand!="Default value" && model!="Default value" && engine!="Default value" && fuel!="Default value" && year!="Default value"){
             DatabaseConnections db = new DatabaseConnections();
             String item_code = db.GetId(brand,"Brand")+db.GetId(model,"Model")+db.GetId(fuel,"Fuel")+db.GetId(engine,"Engine")+db.GetId(year,"Year");
             String sql = "select cat_id,part_name from inventory_item inner join sparepart where Inventory_Item.part_id=SparePart.part_id AND (brand_id='" + db.GetId(brand, "Brand") + "'AND model_id ='" + db.GetId(model, "Model") + "'AND fuel_id='" + db.GetId(fuel, "Fuel") + "'AND engine_id='" + db.GetId(engine, "Engine") + "'AND year_id='" + db.GetId(year, "Year") + "') order by cat_id";
@@ -298,21 +283,33 @@ namespace Motor_Yard
             Session["quantities"] = Quantities;
             
             Session["parts"]=(String[][])pub.ToArray(typeof(String[]));
+            Session["inv_code"] = item_code;
             Response.Redirect("Vehicle.aspx");
+            }
+            else { 
 
-            
-            drop_brand.Items.Clear();
+            Response.Redirect("Home.aspx");
+        }
+            /*drop_brand.Items.Clear();
             drop_model.Items.Clear();
             drop_fuel.Items.Clear();
             drop_engine.Items.Clear();
-
             drop_year.Items.Clear();
+
+            drop_brand.Text = "Select Brand";
+            drop_brand.Text = "Select Brand";
+            drop_brand.Text = "Select Brand";
+            drop_brand.Text = "Select Brand";
+            drop_brand.Text = "Select Brand";*/
             
             
 
 
             
         }
+       
+
+        
     }
 
 }

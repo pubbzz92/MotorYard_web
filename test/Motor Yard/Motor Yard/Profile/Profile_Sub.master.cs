@@ -11,7 +11,10 @@ namespace Motor_Yard.Profile
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //company_name.Text = "ABC Company [pvt] Limited";
+            company_name.Text = (String)Session["company"]+" [PVT] Limited";
+            company_email.Text = (String)Session["Email"];
+            company_area.Text = (String)Session["area"];
         }
     }
 }

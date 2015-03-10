@@ -14,7 +14,19 @@ namespace Motor_Yard
 
         }
 
+        
+
+        protected void btn_area_Click(object sender, EventArgs e)
+        {
+
+        }
+
         protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButton3_Click(object sender, EventArgs e)
         {
 
         }

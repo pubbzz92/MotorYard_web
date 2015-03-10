@@ -11,7 +11,7 @@ namespace Motor_Yard
 {
 
 
-    public partial class WebForm1
+    public partial class notification
     {
     }
 }

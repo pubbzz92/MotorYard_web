@@ -4,26 +4,14 @@
         .auto-style8 {
             width: 232px;
         }
-        .auto-style9 {
-            width: 12px;
-        }
         .auto-style11
         {
             height: 35px;
             width: 561px;
         }
-        .auto-style12
-        {
-            height: 42px;
-            width: 514px;
-        }
         .auto-style13
         {
             width: 561px;
-        }
-        .auto-style14
-        {
-            width: 514px;
         }
          .auto-style15
         {
@@ -82,8 +70,6 @@
                             
                         </td>
                         <td style="padding-right:10px">
-
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtID" ErrorMessage="The ID is incorrect" Font-Size="Small" ForeColor="Red" ValidationExpression="^[0-9]{3}$" Display="Dynamic"></asp:RegularExpressionValidator>
 
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="This field can not be empty" ControlToValidate="txtID" Display="Dynamic" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
                         </td>
@@ -329,17 +315,18 @@
 
                  </td>
                 <td style="vertical-align:top;">
-                     <table cellpadding="0" cellspacing="0" class="auto-style1" style="float:right; width:500px;   margin-bottom:30px; margin-top:0px; " >
+                    <asp:Panel ID="sign" runat="server">
+                     <table  cellpadding="0" cellspacing="0" class="auto-style1" style="float:right; width:550px;   margin-bottom:30px; margin-top:0px; " >
         <tr>
             <td colspan="2" style="padding:2px 0 15px 75px; vertical-align:top;font-size:25px;text-align:left;"><b> User Login</b></td>
         </tr>
         <tr>
-            <td style="text-align:left;padding:0 0 0 75px;" class="auto-style9">Username</td>
-            <td style="padding: 1px 10px 1px 10px;" class="auto-style8"> <asp:TextBox ID="TextBox1" runat="server" Width="240px" style="border-radius:3px;padding:5px; border: 1px solid #d5cdcd;"></asp:TextBox></td>
+            <td style="text-align:left;padding:0 0 0 30px;width:4px;margin-left:30px" >Username</td>
+            <td style="padding: 1px 10px 1px 10px;" class="auto-style8"> <asp:TextBox ID="TextBox1" runat="server" Width="240px" style="border-radius:3px;padding:5px; border: 1px solid #d5cdcd;"></asp:TextBox><td> <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="This field can not be empty" ControlToValidate="TextBox1"></asp:RequiredFieldValidator></td></td>
         </tr>
         <tr>
-            <td style="text-align:left;padding:0 0 0 75px;" class="auto-style9">Password</td>
-            <td style="padding: 5px 10px 2px 10px;" class="auto-style8"><asp:TextBox ID="TextBox2" runat="server" Width="240px" style="border-radius:3px; padding:5px;border: 1px solid #d5cdcd;" TextMode="Password"></asp:TextBox></td>
+            <td style="text-align:left;padding:0 0 0 30px;width:4px;margin-left:10px" >Password</td>
+            <td style="padding: 5px 10px 2px 10px;" class="auto-style8"><asp:TextBox ID="TextBox2" runat="server" Width="240px" style="border-radius:3px; padding:5px;border: 1px solid #d5cdcd;" TextMode="Password"></asp:TextBox><td> <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="This field can not be empty" ControlToValidate="TextBox2"></asp:RequiredFieldValidator></td></td>
         </tr>
         <tr>
             
@@ -354,10 +341,12 @@
         <tr>
             
             <td colspan="2"style="padding:5px 0 10px 75px;" class="auto-style8">
-        <asp:LinkButton ID="LinkButton2" runat="server" Style="  margin-right:130px; float:left;border-radius:5px;padding-left:5px; padding-left:20px;  border: 3px solid #d5cdcd; " PostBackUrl="~/Profile/notification.aspx"  Height="27px" Width="85px" BackColor="#95D395" ForeColor="Black" BorderStyle="Solid"><b>Log in</b></asp:LinkButton></td>
+        <asp:LinkButton ID="LinkButton2" runat="server" Style="  margin-right:130px; float:left;border-radius:5px;padding-left:5px; padding-left:20px;  border: 3px solid #d5cdcd; "   Height="27px" Width="85px" BackColor="#95D395" ForeColor="Black" BorderStyle="Solid" OnClick="LinkButton2_Click"><b>Log in</b></asp:LinkButton></td>
         
         </tr>
     </table>
+                        </asp:Panel>
+                     
     </td>
             </tr>
         </table>

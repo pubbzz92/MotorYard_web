@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+using System.Collections;
 
 namespace Motor_Yard
 {
@@ -18,14 +19,14 @@ namespace Motor_Yard
             /*string connectionStr = ConfigurationManager.ConnectionStrings["Test"].ConnectionString;
             con.ConnectionString = @connectionStr;
             cmd.Connection = con;*/
-            String sqlconnection = "Server=localhost;DATABASE=motoryard_inventory;UID=root;";
+            String sqlconnection = "Server=localhost;DATABASE=motoryard_web;UID=root;";
             MySqlConnection con = new MySqlConnection(sqlconnection);
 
 
         }
 
         // mysql connections
-        static String sqlconnection = "Server=localhost;DATABASE=motoryard_inventory;UID=root;";
+        static String sqlconnection = "Server=localhost;DATABASE=motoryard_web;UID=root;";
         MySqlConnection con = new MySqlConnection(sqlconnection);
         MySqlCommand cmd;
 
@@ -540,6 +541,44 @@ namespace Motor_Yard
                 //
             }
             return q;
+        
+        
+        }
+        public String[][] getCli(String sql) {
+
+            ArrayList list = new ArrayList();
+            try
+            {
+                con.Open();
+                cmd = con.CreateCommand();
+                cmd.CommandText = sql;
+                dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        ArrayList list2 = new ArrayList();
+                        list2.Add(dr[0].ToString());
+                        list2.Add(dr[1].ToString());
+                        list2.Add(dr[2].ToString());
+                        list2.Add(dr[3].ToString());
+                        list2.Add(dr[4].ToString());
+                        list2.Add(dr[5].ToString());
+                        list.Add((String[])list2.ToArray(typeof(String)));
+                    }
+                }
+
+                con.Close();
+            }
+            catch (Exception e)
+            {
+
+                //
+            }
+            return (String[][])list.ToArray(typeof(String[]));
+        
+        
         
         
         }

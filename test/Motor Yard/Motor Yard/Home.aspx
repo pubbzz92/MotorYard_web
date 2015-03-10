@@ -2,11 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style5 {
-            width: 608px;
-        }
-        .auto-style6 {
-            width: 392px;
+        .auto-style7 {
+            height: 62px;
         }
     </style>
 <%--    <script src="scripts/modernizr-2.6.1.min.js"></script>
@@ -128,8 +125,8 @@
              </td>
            
 
-            <td class="auto-style3" style=" display:block; vertical-align:top;padding-bottom:10px;">
-                <table class="auto-style2" style="display:block;width:200px;height: 250px; background-color:#C5D8FF; margin:0 5px 0 0; border: 1px solid #dbd7d7; border-radius: 4px" >
+            <td class="auto-style3" style=" display:block; vertical-align:top;padding-bottom:10px;padding-left:10px">
+                <table class="auto-style2" style="display:block;width:200px;height: 260px; background-color:#C5D8FF; margin:10px 5px 0 0; border: 1px solid #dbd7d7; border-radius: 4px" >
                     <tr >
                         <td class="auto-style4" style=" padding:6px 0px 6px 15px;margin-top:50px;"><b>SELECT YOUR VEHICLE</b></td>
                     </tr>
@@ -159,15 +156,16 @@
                     </tr>
                             
                     <tr>
-                        <td class="auto-style4"><asp:DropDownList ID="drop_year" AppendDataBoundItems="True" runat="server" style="width:180px; padding:2px 0 2px 2px;margin:2px 0 0 6px;border-radius: 3px;background-color:#f6f1f1" DataTextField="year" DataValueField="year" OnTextChanged="drop_year_SelectedTextChanged" AutoPostBack="True">
+                        <td class="auto-style4"><asp:DropDownList ID="drop_year" AppendDataBoundItems="True"  runat="server" style="width:180px; padding:2px 0 2px 2px;margin:2px 0 0 6px;border-radius: 3px;background-color:#f6f1f1" DataTextField="year" DataValueField="year" OnTextChanged="drop_year_SelectedTextChanged" AutoPostBack="True">
                              <asp:ListItem Text="Select Make Year" Value="Default value" />
                              </asp:DropDownList>
                             <br />
                         </td>
                     </tr>
+                    
               
                     <tr>
-                        <td ><asp:LinkButton ID="button_go" runat="server" CssClass="myButton"  style="display: block;height: 30px;width: 180px;margin: 0 0px 8px 6px; text-align:center; margin-top:10px;" PostBackUrl="" OnClick="button_go_Click" >Go</asp:LinkButton></td>
+                        <td class="auto-style7" ><asp:LinkButton ID="button_go" runat="server" CssClass="myButton"  style="display: block;height: 30px;width: 180px;margin: 0 0px 8px 6px; text-align:center; margin-top:10px;"  OnClick="button_go_Click" >Go</asp:LinkButton></td>
                     </tr>
                     </table>
                     </td>

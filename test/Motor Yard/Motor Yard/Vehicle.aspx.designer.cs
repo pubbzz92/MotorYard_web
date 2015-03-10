@@ -13,6 +13,24 @@ namespace Motor_Yard {
     public partial class Default {
         
         /// <summary>
+        /// CheckBoxList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
+        
+        /// <summary>
+        /// btn_area control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn_area;
+        
+        /// <summary>
         /// t1 control.
         /// </summary>
         /// <remarks>
@@ -37,7 +55,7 @@ namespace Motor_Yard {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ph1;
+        protected global::System.Web.UI.WebControls.Panel ph1;
         
         /// <summary>
         /// t2 control.
@@ -64,7 +82,7 @@ namespace Motor_Yard {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ph2;
+        protected global::System.Web.UI.WebControls.Panel ph2;
         
         /// <summary>
         /// t3 control.
@@ -91,7 +109,7 @@ namespace Motor_Yard {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ph3;
+        protected global::System.Web.UI.WebControls.Panel ph3;
         
         /// <summary>
         /// t4 control.
@@ -118,7 +136,7 @@ namespace Motor_Yard {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ph4;
+        protected global::System.Web.UI.WebControls.Panel ph4;
         
         /// <summary>
         /// t5 control.
@@ -145,7 +163,7 @@ namespace Motor_Yard {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ph5;
+        protected global::System.Web.UI.WebControls.Panel ph5;
         
         /// <summary>
         /// t6 control.
@@ -172,7 +190,7 @@ namespace Motor_Yard {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ph6;
+        protected global::System.Web.UI.WebControls.Panel ph6;
         
         /// <summary>
         /// t7 control.
@@ -199,7 +217,7 @@ namespace Motor_Yard {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ph7;
+        protected global::System.Web.UI.WebControls.Panel ph7;
         
         /// <summary>
         /// t8 control.
@@ -226,6 +244,15 @@ namespace Motor_Yard {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ph8;
+        protected global::System.Web.UI.WebControls.Panel ph8;
+        
+        /// <summary>
+        /// btn_req control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn_req;
     }
 }

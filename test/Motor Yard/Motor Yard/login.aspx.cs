@@ -12,7 +12,7 @@ namespace Motor_Yard
 {
     public partial class login : System.Web.UI.Page
     {
-        static String sqlconnection = "Server=localhost;DATABASE=motoryard_inventory;UID=root;";
+        static String sqlconnection = "Server=localhost;DATABASE=motoryard_web;UID=root;";
         MySqlConnection con = new MySqlConnection(sqlconnection);
         MySqlCommand cmd;
 
@@ -25,7 +25,7 @@ namespace Motor_Yard
 
 
 
-            if (Request.QueryString["signUp"] != null)// methanadi balanawa singup kiyana variable eka tiyanawada kiyala thiyanawanam d kiyana variable ekata query eka asing karagannawa
+            if (Request.QueryString["signUp"] != null)
             {
                 string d = Request.QueryString["signUp"];
 
@@ -109,11 +109,17 @@ namespace Motor_Yard
                     + "','" + address + "','" + contact + "','" + email + "','" + passwrd + "')";
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Redirect(Request.Url.AbsoluteUri);
-                //RegForm.Visible = false;
-                //PanelnewRegBtn.Visible = true;
+               Response.Redirect(Request.Url.AbsoluteUri);
+                RegForm.Visible = false;
+                PanelnewRegBtn.Visible = true;
+                //Response.Redirect("~/login.aspx?signUp=true");
 
+            }
+            else if(Page.IsValid==false)
+            {
 
+                //sign.Visible = false;
+                Response.Redirect("~/login.aspx?signUp=true");
             }
 
 
@@ -129,6 +135,60 @@ namespace Motor_Yard
 
         }
 
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                if (get_user(TextBox1.Text, TextBox2.Text))
+                {
+
+                    Response.Redirect("~/Profile/notification.aspx");
+
+                }
+                else
+                {
+                    Response.Redirect("~/Home.aspx"); 
+
+                }
+            }
+        }
+
+        public Boolean get_user(String username, String pass)
+        {
+
+            MySqlDataReader dr;
+            Boolean validuser;
+
+            Session["user"] = username;
+            Session["pwd"] = pass;
+
+
+
+            con.Open();
+            cmd = con.CreateCommand();
+            cmd.CommandText = "select * from client where client_name='" + username + "' and password='" + pass + "'";
+            dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Session["company"] = dr[2].ToString();
+                    Session["area"] = dr[3].ToString();
+                    Session["email"] = dr[6].ToString();
+                }
+                con.Close();
+                validuser = true;
+
+            }
+            else
+            {
+                validuser = false;
+            }
+
+            return validuser;
+
+
+        }
 
 
     }

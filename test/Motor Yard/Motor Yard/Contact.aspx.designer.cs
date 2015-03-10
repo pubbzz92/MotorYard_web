@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Motor_Yard
-{
-    public partial class Contact
-    {
+namespace Motor_Yard {
+    
+    
+    public partial class Contact {
     }
 }

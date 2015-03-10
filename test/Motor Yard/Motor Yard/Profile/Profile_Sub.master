@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="Profile_Sub.master.cs" Inherits="Motor_Yard.Profile.Profile_Sub" %>
+﻿ <%@ Master Language="C#" MasterPageFile="../main.Master" AutoEventWireup="true" CodeBehind="Profile_Sub.master.cs" Inherits="Motor_Yard.Profile.Profile_Sub" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:ContentPlaceHolder ID="headProfile" runat="server">
@@ -28,25 +28,27 @@
 
 
 
-                <table cellpadding="0" cellspacing="0" class="auto-style2" style="width: 1000px; vertical-align: top; border-bottom: 1px solid #c2a3ef; padding-bottom: 10px;">
+                <table cellpadding="0" cellspacing="0" class="auto-style2" style="width: 1000px; vertical-align: top; border-bottom: 1px solid #c2a3ef; padding-bottom: 10px; margin-top:10px;">
                     <tr>
                         <td>
-                            <table cellpadding="0" cellspacing="0" class="auto-style3" style="width: 700px;">
+                            <table cellpadding="0" cellspacing="0" class="auto-style3" style="width: 700px; margin-top:5px;">
                                 <tr>
                                     <td rowspan="2" style="width: 60px;" class="auto-style4">
                                         <img src="../images/pr.jpg" style="width: 50px; height: 50px" alt="Myprofile" /></td>
-                                    <td rowspan="2" style="padding: 2px 0 0 0; vertical-align: top; font-size: 18px;">ABC Company PVT [Ltd]
-                                             <br />
-                                        <span style="display: block; font-size: 12px; color: #0b74ce;">dulamadushani91@gmail.com
-                                             <br />
-                                            Nugegoda</span></td>
+                                    <td rowspan="2" style="padding: 2px 0 0 0; vertical-align: top; font-size: 18px;">
+                                             <%--<br />--%>
+                                        <asp:Label ID="company_name" runat="server" style="font-size:18px; vertical-align:top;padding:2px 0 0 0;" Text="TEMP"></asp:Label>
+                                        <%--<span style="display: block; font-size: 12px; color: #0b74ce;" id="company_email">--%>
+                                        <asp:Label ID="company_email" runat="server" style="display: block; font-size: 12px; color: #0b74ce;"></asp:Label>
+                                            <%-- <br />--%>
+                                           <asp:Label ID="company_area" runat="server" style="display: block; font-size: 12px; color: #0b74ce;"></asp:Label><%--</span>--%></td>
                                 </tr>
 
                             </table>
 
                         </td>
                         <td style="float: right;">
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profile/notification.aspx" Style="margin: 0 10px 0 0;" CssClass="clientProfile">Notification</asp:HyperLink>|<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profile/createAds.aspx" Style="margin: 0 10px 0 10px;" CssClass="clientProfile">Advertisement</asp:HyperLink>|<asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Profile/profile.aspx" Style="margin: 0 0 0 10px;" CssClass="clientProfile">Profile</asp:HyperLink></td>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profile/notification.aspx" Style="margin: 0 10px 0 0;" CssClass="clientProfile">Notification</asp:HyperLink>|<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profile/createAds.aspx" Style="margin: 0 10px 0 10px;" CssClass="clientProfile">Advertisement</asp:HyperLink><%--|<asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Profile/profile.aspx" Style="margin: 0 0 0 10px;" CssClass="clientProfile">Profile</asp:HyperLink>--%></td>
                     </tr>
 
 

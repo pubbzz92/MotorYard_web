@@ -132,6 +132,7 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Contactpage.aspx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -191,8 +192,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Profile\notification.aspx" />
+    <Content Include="Services.aspx" />
+    <Content Include="Shops.aspx" />
     <Content Include="Vehicle.aspx" />
-    <Content Include="Default2.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.jpg" />
@@ -232,6 +235,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="Profile\Adssub.master" />
+    <Content Include="Profile\Profile_Sub.master" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -240,13 +246,9 @@
     <Content Include="Scripts\npm.js" />
     <Content Include="WebForm1.aspx" />
     <Content Include="main.Master" />
-    <Content Include="Profile\Adssub.master" />
-    <Content Include="Profile\Profile_Sub.master" />
     <Content Include="Profile\Advertisment.aspx" />
     <Content Include="Profile\createAds.aspx" />
     <Content Include="Profile\Default.aspx" />
-    <Content Include="Profile\edit_ads.aspx" />
-    <Content Include="Profile\notification.aspx" />
     <Content Include="Profile\profile.aspx" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
@@ -331,6 +333,13 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseConnections.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -353,19 +362,48 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="IISHandler1.cs" />
+    <Compile Include="Profile\Adssub.master.cs">
+      <DependentUpon>Adssub.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\Adssub.master.designer.cs">
+      <DependentUpon>Adssub.master</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\notification.aspx.cs">
+      <DependentUpon>notification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\notification.aspx.designer.cs">
+      <DependentUpon>notification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\Profile_Sub.master.cs">
+      <DependentUpon>Profile_Sub.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\Profile_Sub.master.designer.cs">
+      <DependentUpon>Profile_Sub.master</DependentUpon>
+    </Compile>
+    <Compile Include="Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shops.aspx.cs">
+      <DependentUpon>Shops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shops.aspx.designer.cs">
+      <DependentUpon>Shops.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vehicle.aspx.cs">
       <DependentUpon>Vehicle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Vehicle.aspx.designer.cs">
       <DependentUpon>Vehicle.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default2.aspx.cs">
-      <DependentUpon>Default2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default2.aspx.designer.cs">
-      <DependentUpon>Default2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -383,13 +421,6 @@
     </Compile>
     <Compile Include="main.Master.designer.cs">
       <DependentUpon>main.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Profile\Adssub.master.cs">
-      <DependentUpon>Adssub.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Profile\Adssub.master.designer.cs">
-      <DependentUpon>Adssub.master</DependentUpon>
     </Compile>
     <Compile Include="Profile\Advertisment.aspx.cs">
       <DependentUpon>Advertisment.aspx</DependentUpon>
@@ -412,33 +443,12 @@
     <Compile Include="Profile\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profile\edit_ads.aspx.cs">
-      <DependentUpon>edit_ads.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Profile\edit_ads.aspx.designer.cs">
-      <DependentUpon>edit_ads.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Profile\notification.aspx.cs">
-      <DependentUpon>notification.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Profile\notification.aspx.designer.cs">
-      <DependentUpon>notification.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Profile\profile.aspx.cs">
       <DependentUpon>profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Profile\profile.aspx.designer.cs">
       <DependentUpon>profile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Profile\Profile_Sub.master.cs">
-      <DependentUpon>Profile_Sub.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Profile\Profile_Sub.master.designer.cs">
-      <DependentUpon>Profile_Sub.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -461,6 +471,13 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

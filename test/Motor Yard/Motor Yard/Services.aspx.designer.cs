@@ -10,6 +10,6 @@
 namespace Motor_Yard {
     
     
-    public partial class About {
+    public partial class Services {
     }
 }

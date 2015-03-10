@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/sub.master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Motor_Yard.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/sub.master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Motor_Yard.notification" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="subhead" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="sub_place" runat="server">

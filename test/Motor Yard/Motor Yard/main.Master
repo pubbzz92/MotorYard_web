@@ -41,7 +41,7 @@
     <link href="style/menustyle.css" rel="stylesheet" />
 
 </head>
-<body>
+<body style="overflow-x:hidden">
     <div style="width:700px; padding-left:90px">
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -95,7 +95,7 @@
                         
 
 
-                        <table style="float:left;background-image:url('Images/bann.jpg') " class="auto-style1" >
+                        <table style="float:left;background-image:url('/Images/bann.jpg') " class="auto-style1" >
                             <tr>
                                <td class="auto-style2">
                                     
@@ -107,12 +107,12 @@
                                     | 
                                     <asp:LinkButton ID="LinkButton2" Style=" color: #000; border-radius:12px;border: 3px solid #d5cdcd; padding:3px; padding-left:5px;padding-right:5px; margin-right:5px;"  runat="server" BorderStyle="Solid" PostBackUrl="~/login.aspx?signUp=true"  Font-Size="Large" BackColor="#C5D8FF" Font-Bold="False"   ForeColor="Black">Sign Up</asp:LinkButton>
                                
-                                <ul  class="nav nav-pills" style="width: 894px; float:left; text-align:right; margin-top:15px; margin-bottom:0; margin-left:185px;">
+                                <ul  class="nav nav-pills" style="width: 894px; float:left; text-align:right; margin-top:15px; margin-bottom:0; margin-left:284px;">
                                             <li><a href="/Home.aspx"><b>Home</b></a></li>
-                                            <li><a href="#"><b>Category</b></a></li>
-                                            <li><a href="#"><b>Services & Benefits</b></a></li>
-                                            <li><a href="#"><b>Contact</b></a></li>
-                                            <li><a href="#"><b> About </b></a></li>
+                                            <%--<li><a href="#"><b>Category</b></a></li>--%>
+                                            <li><a href="/Services.aspx"><b>Services & Benefits</b></a></li>
+                                            <li><a href="/ContactUs.aspx"><b>Contact</b></a></li>
+                                            <li><a href="/About.aspx"><b> About </b></a></li>
                                             
                                            
                                             
@@ -177,10 +177,8 @@
                     <td style="text-align: center; background-color:#FF6600; border-radius: 10px 10px 0 0;">
 
                         <p>
-                            <asp:HyperLink ID="HyperLink1" runat="server"> Home</asp:HyperLink>
-                            &nbsp;|
-                    <asp:HyperLink ID="HyperLink2" runat="server"> Category</asp:HyperLink>
-                            | About | Services & Benefits | Contact
+                            
+                            Home | Services & Benefits | Contact |  About
                             <br />
                             ©  2015 Motor Yard. All rights reserved, ℗ Mortor Yard
 
